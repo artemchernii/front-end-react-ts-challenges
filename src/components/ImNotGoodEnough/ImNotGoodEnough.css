@@ -1,0 +1,153 @@
+:root {
+	--primary: tomato;
+	--border-highlight: 1px solid var(--primary);
+}
+.wrapper {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	display: grid;
+	place-items: center;
+}
+
+.cardgroups,
+.cardgroup,
+.card {
+	aspect-ratio: 5 / 7;
+}
+
+.cardgroups,
+.cardgroup,
+.bigcard {
+	width: 30vmin;
+}
+
+.cardgroup {
+	position: absolute;
+}
+
+.card {
+	background-color: rgba(255, 255, 255, 0.05);
+	position: absolute;
+}
+.bigcard {
+	width: 30vmin;
+	border-radius: 1vmin;
+	transition: all 0.5s cubic-bezier(0.07, 0.89, 0.27, 0.94);
+}
+.littlecard {
+	width: 12vmin;
+	border-radius: 2vmin;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.5s cubic-bezier(0.07, 0.89, 0.27, 0.94);
+}
+
+.littlecard:nth-child(1) {
+	background-image: url('https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80');
+	background-size: cover;
+}
+.littlecard:nth-child(3) {
+	background-image: url('https://images.unsplash.com/photo-1601288496920-b6154fe3626a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+	background-size: cover;
+}
+.littlecard:nth-child(5) {
+	background-image: url('https://images.unsplash.com/photo-1614090965443-3df21c6906ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80');
+	background-size: cover;
+}
+.littlecard:nth-child(7) {
+	background-image: url('https://images.unsplash.com/photo-1516195851888-6f1a981a862e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80');
+	background-size: cover;
+}
+.bigcard:nth-child(2) {
+	transform: translateX(-10%) rotate(-3deg);
+	background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3087&q=80');
+	background-size: cover;
+}
+
+.bigcard:nth-child(4) {
+	background-image: url('https://images.unsplash.com/photo-1503104834685-7205e8607eb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+	background-size: cover;
+	transform: rotate(2deg);
+}
+
+.bigcard:nth-child(6) {
+	background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+	background-size: cover;
+	transform: translateX(-6%) rotate(-3deg);
+}
+
+.bigcard:nth-child(8) {
+	background-image: url('https://images.unsplash.com/photo-1600600423621-70c9f4416ae9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80');
+	background-size: cover;
+	transform: translate(10%, 3%) rotate(6deg);
+}
+
+.cardgroup:hover .bigcard:nth-child(2) {
+	transform: translate(-75%, 16%) rotate(-24deg);
+}
+.cardgroup:hover .bigcard:nth-child(4) {
+	transform: translate(-25%, 8%) rotate(-8deg);
+}
+.cardgroup:hover .bigcard:nth-child(6) {
+	transform: translate(25%, 8%) rotate(8deg);
+}
+.cardgroup:hover .bigcard:nth-child(8) {
+	transform: translate(75%, 16%) rotate(24deg);
+}
+
+.cardgroup:hover .littlecard:nth-child(1) {
+	transform: translate(200%, 160%) rotate(15deg);
+}
+.cardgroup:hover .littlecard:nth-child(3) {
+	z-index: 1;
+	transform: translate(160%, -170%) rotate(15deg);
+}
+.cardgroup:hover .littlecard:nth-child(5) {
+	transform: translate(-280%, -170%) rotate(-15deg);
+}
+.cardgroup:hover .littlecard:nth-child(7) {
+	transform: translate(-280%, 140%) rotate(-15deg);
+}
+
+.card-swiper-buttons {
+	margin-top: 8vmin;
+	display: flex;
+	justify-content: space-around;
+	padding: 0px 4vmin;
+}
+.card-swiper-buttons > button {
+	font-size: 2.5vmin;
+	border: 0.4vmin solid rgba(200, 200, 200);
+	border-radius: 100%;
+	color: #fff;
+	background-color: transparent;
+	height: 7vmin;
+	width: 7vmin;
+	cursor: pointer;
+}
+#love-button {
+	color: rgb(33, 150, 243);
+	border-color: rgb(33, 150, 243);
+}
+.cardgroup {
+	transition: transform 400ms ease;
+}
+.cardgroup.unknown {
+	transform: scale(0);
+}
+.cardgroup.active {
+}
+.cardgroup.after {
+	transform: translateX(50%) scale(0);
+}
+.cardgroup.before-active {
+	transform: translateX(-50%) scale(0);
+	transition: none;
+}
+.card-group.becoming-after {
+	transform: translateX(50%) scale(0);
+	transition: none;
+}
